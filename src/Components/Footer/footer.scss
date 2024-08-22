@@ -1,0 +1,42 @@
+@import '../scss/extend';
+@import '../scss/includes';
+@import '../scss/variables';
+.footer{
+    @include flex_center;
+    flex-direction:row;
+    flex-wrap: wrap;
+    text-align: center;
+    min-height:20vh;
+    background-color: #1a1a1a;
+    color: white;
+    padding:2rem;
+  }
+  .foot p{
+  font-family:$font;
+  line-height: 18.29px;
+  letter-spacing: 0.1854em;
+  text-align: center;
+  margin: 8px;
+  @include text(15px,white,700);
+  }
+  .footer .go a{
+  font-family:$font;
+  line-height: 18.29px;
+  letter-spacing: 0.1854em;
+  text-align: center;
+  margin: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  @include text(15px,white,700);
+  } 
+  .internet img{
+    margin: 6px;
+  }
+  @include tablet{
+  
+  }
+  @include mobile{
+    .foot p{
+      font-size: 11px;
+    }
+  }

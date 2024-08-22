@@ -1,0 +1,118 @@
+@import '../scss/extend';
+@import '../scss/includes';
+@import '../scss/variables';
+
+#hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+   .intro {
+    text-align: left;
+    margin-top: 5rem;
+    padding-left: 5rem;
+   }
+   .intro h6 {
+    font-family: $fontFamily;
+    line-height: 46.96px;
+    text-align: center;
+    width: 8.91vw;
+    height: 58px;
+    margin-top: 50px;
+    @include text(30px,black,700);
+  }
+  .intro h2 {
+    width: 40vw;
+    font-family: $fontFamily;
+    margin-top: 20px;
+    @include text(60px,black,700);
+  }
+  .intro p{
+    font-family:$fontFamily;
+    // height: 40px;
+    width: 40vw;
+    margin-bottom: 50px;
+    @include text(18px, #909090,800);
+  }
+
+  /*socials*/
+  #hero .socials img {
+    width: 50px;
+    height: 40px;
+  }
+  .socials .box {
+    border: solid #c4c4c4;
+    border-radius: 2px;
+    background-color: #c4c4c4;
+    margin: 8px;
+    padding: 5px;
+  }
+  /*user side*/
+  .user {
+    max-width: 783px;
+    min-height: 80vh;
+    float: left;
+    position: relative;
+    top: 0%;
+    right: 4rem;
+  }
+  .user img {
+    width: 100%;
+    height: 100vh;
+  }
+  .user .overlay {
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    font-family: "Roboto" sans-serif;
+    line-height: 17.58px;
+    @extend .center;
+    @include text(15px,black,400);
+  }  }
+#hero2 {
+    display: none;
+  }
+
+@include tablet{
+ #hero .intro {
+    align-content: center;
+    padding-left: 3rem;
+   }
+   #hero .intro h6 {font-size: 20px;}
+   #hero .intro h2 {font-size: 45px;}
+}
+@include mobile{
+  #hero{display: none;}
+
+#hero2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  min-width: 100%;
+  min-height: 100vh;
+  color: white;
+
+ h6 {
+  font-family: "Advent Pro", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 29.9px;
+}
+ h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39.01px;
+  margin-bottom: 15px;
+}
+#hero2 img {
+  margin-bottom: 20px;
+}
+}
+#hero2 .socials img {
+  width: 30px;
+  height: 40px;
+  margin: 15px;
+}
+}

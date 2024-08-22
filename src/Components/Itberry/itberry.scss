@@ -1,0 +1,61 @@
+@import '../scss/extend';
+@import '../scss/includes';
+@import '../scss/variables';
+
+#berry {
+    @include img('../../assets/berries.svg');
+    background-color: #1d1d1d;
+    color: white;
+    padding: 30px;
+    max-width: 100%;
+    min-height: 20vh;
+ }
+  #berry h2 {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 7px;
+    margin: 8px;
+    @include text(32px,white,700);
+  }
+  #berry p {
+    font-family: "Open Sans", sans-serif;
+    margin: 10px;
+    line-height: 1.5;
+    padding: 5px;
+    width: 60%;
+    @include text(17px,white,400);
+  }
+
+  .btn {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    background-color: #1d1d1d;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    width: 139px;
+    height: 32px;
+    border-top: 0;
+    border-bottom: 0;
+    margin: 10px;
+    margin: 5px;
+    @include text(16px,white,600);
+  }
+
+
+  @include tablet{
+    #berry{background-size: 50%;}
+  
+  }
+  @include mobile{
+    #berry {
+      @include imag('../../assets/ITB.png');
+      background-size: 70%;
+      background-position: center;
+      text-align: center;
+      justify-content: center;
+
+       p {
+        width: unset;
+      }
+   }
+   
+  }

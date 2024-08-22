@@ -1,0 +1,110 @@
+@import '../scss/extend';
+@import '../scss/includes';
+@import '../scss/variables';
+
+#header{
+    @extend .size;
+    @include image('../../assets/Rectangle 67.png');
+    background-position: top right;
+    background-size: 60vw 100%;
+    padding-top: 50px;
+}
+  .white{
+    display: none;
+  }
+    ol {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      list-style-type: none;
+      gap:25px;
+    }
+    .links {
+      @include flex_center;
+      margin-left: 10rem;
+    }
+    .links a {
+      @include text(15px,white,700);
+      font-family: $font;
+      line-height: 18.28px;
+      min-width: 8vw;
+      height: 46px;
+      display: flex;
+      @include center;
+      padding: 9px;
+      text-decoration: none;
+    }
+    .links .contact{
+        @extend .anchor2;  
+    }
+    #header .menu {display: none;
+      padding-left: 10rem;
+    }
+    // dropdown
+      .dropbtn {
+        padding: 16px;
+        border: none;
+        @include text(16px,white,0);
+      }
+      .dropdown {
+        position: relative;
+        display:none;
+      }
+     .dropdown-content {
+        display: none;
+        position: fixed;
+        background-color: #00000066;
+        width: 100%;
+        top: 75px;
+        left: 0px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        z-index: 1;
+      }
+      .dropdown-content a {
+        text-decoration: none;
+        padding: calc(52px / 2) 0px;
+        display:block;
+        font-family:$font;
+        line-height: 14.63px;
+        text-align: center;
+        @include text(12px,white,600);
+      
+        &:hover {
+        background-color: #ddd;
+        color: black;
+      }
+    }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    
+
+
+ @include tablet{
+
+ }
+@include mobile{
+  #header{
+    @include image('../../assets/pexels-photo 2.png');   
+  } 
+ .navBar{
+    background-color: black;
+    min-height:40px;
+    padding:20px 42px 10px 42px;
+  }
+.logo .white {
+  display: flex;
+  }
+ .logo .black{
+  display: none;
+ }
+ ol .links{
+  display: none;
+ }
+#header ol .menu{
+  display: flex;
+ }
+
+}
+

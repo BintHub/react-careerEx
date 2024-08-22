@@ -1,0 +1,80 @@
+@import '../scss/extend';
+@import '../scss/includes';
+@import '../scss/variables';
+
+#portfolio {
+    @include image('../../assets/imgbg.png');
+    height: 40vh;
+
+    .work h2 {
+    margin-top: 3rem;
+  }
+}
+  /*filterbar*/
+  #port {
+    background-color: #1a1a1a;
+    @include flex_center;
+    position: top;
+    min-height: 10vh;
+  }
+  .filterbar {
+    border-bottom: solid white;
+  }
+ .filterbar a {
+    font-family: $font;
+    line-height: 17.07px;
+    text-align: center;
+    margin: 40px;
+    text-decoration: none;
+    @include text(14px,white,600);
+  }
+  .filterbar2 {
+    display: none;
+  }
+  @include tablet{
+  
+  }
+  @include mobile{
+    .filterbar {
+      display: none;
+    }
+    .filterbar2 {
+      display: flex;
+      flex-direction: column;
+    }
+    .filterbar2 .bar {
+      border-bottom: solid white;
+      margin-top: 1.5rem;
+    }
+    .filterbar2 .bar a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 17.07px;
+      text-align: center;
+      color: white;
+      margin: 50px;
+      text-decoration: none;
+    }
+  
+    .filterbar2 .bar2 {
+      border-bottom: solid white;
+    }
+    .bar2 {
+      justify-content: center;
+      text-align: center;
+      margin: 40px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .filterbar2 .bar2 a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 17.07px;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+    }
+    
+  }

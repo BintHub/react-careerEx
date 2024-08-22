@@ -1,0 +1,119 @@
+@import '../scss/extend';
+@import '../scss/includes';
+@import '../scss/variables';
+
+#about {
+    min-height: 100vh;
+  }
+  .work {
+    @include flex_center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+  }
+  .work h2 {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+   @include text(25px,black,700);
+    text-align: center;
+    min-width: 25%;
+    min-height: 15vh;
+    border: 6px solid black;
+    padding-top: 30px;
+    margin-top: 5rem;
+  }
+  
+  .work p {
+    font-family: "Open Sans", sans-serif;
+    @include text(15px,black,400);
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn1 {
+    @include text(15px,black,600);
+    @extend .button;
+  }
+  #about .work .info2 {
+    display: none;
+  }
+  /* SERVICES*/
+  .services {
+    @include flex_center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    min-height: 50vh;
+  }
+  .services .first {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 10px;
+  }
+  .first .boxa {
+    @include imag('../../assets/destool.png');
+  }
+  .first .boxb {
+    @include imag('../../assets/devtool.png');
+  }
+  .services h2 {
+    font-family: "Montserrat", sans-serif;
+    @include text(1.3em,black,700);
+    letter-spacing: 5px;
+    width: 277px;
+    height: 44px;
+    margin: 5px;
+    padding: 10px;
+  }
+  .services p {
+    font-family: "Open Sans", sans-serif;
+    @include text(0.87em,black,300);
+    max-width: 80vh;
+    min-height: 104px;
+    padding-left: 10px;
+    margin: 10px;
+  }
+  .services .second {
+    text-align: left;
+    margin-top: 20px;
+    @extend .center;
+  }
+  .second .boxc {
+    @include imag('../../assets/maintool.png');
+    background-position: top left;
+  }
+  @include tablet{
+
+  .services .first {
+    align-items: center;
+    justify-content: center;
+ }
+
+  }
+  @include mobile{
+    #about .work .info {
+      display: none;
+    }
+    #about .work .info2 {
+      display: flex;
+      padding: 2rem;
+      margin: 15px;
+    }
+    .work h2 {
+      padding-bottom: 30px;
+      min-width: 60%;
+      font-size: 25px;
+      border: 10px solid black;
+    }
+    .services {
+      padding:2rem;
+    }
+    .services .first {
+      gap: unset;
+      margin-bottom: unset;
+    }
+    .services .second {
+      margin-top: unset;
+    }
+   
+  }

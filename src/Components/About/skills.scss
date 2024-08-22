@@ -1,0 +1,66 @@
+@import '../scss/extend';
+@import '../scss/includes';
+@import '../scss/variables';
+
+#skill h6 {
+    margin-top: 4rem;
+    max-width: 40vw;
+    min-height: 10vh;
+    font-family: "Montserrat", sans-serif;
+    line-height: 36.57px;
+    letter-spacing: 0.1854em;
+    text-align: right;
+    @include text(25px,black,700);
+}
+  #skill .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include center;
+    max-width: 80%;
+    min-height: 20vh;
+    margin-top: 5rem;
+    margin-left: 7rem;
+  }
+  .box1 {
+    margin-bottom: 2rem;
+    min-height: 20vh;
+  }
+  .box1 img {
+    margin-bottom: 1.2rem;
+  }
+  .container .box1 h3 {
+    font-family: "Montserrat", sans-serif;
+    line-height: 29.26px;
+    letter-spacing: 0.1354em;
+    max-width: 240px;
+    min-height: 52px;
+    @include text(24px,black,400);
+  }
+  @include tablet{
+    #skill .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 70%;
+      min-height: 20vh;
+      margin-top: 5rem;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+  @include mobile{
+    #skill .container {
+      grid-template-columns: repeat(1, 1fr);
+      margin: auto;
+    }
+    .container .box1 h3 {
+      margin: auto;
+    }
+    #skill h6 {
+      max-width:100%;
+      min-height: 20vh;
+      text-align: center;
+      font-size: 30px;
+    }
+   
+  }
+

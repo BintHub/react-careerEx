@@ -1,0 +1,67 @@
+@mixin flex_between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flex_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin center{
+ text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+@mixin text($font-size,$color,$font-weight){
+  font-size: $font-size;
+  color: $color;
+  font-weight: $font-weight;
+}
+//dynamic one to change it to what you want
+@mixin flex($type){
+    display: flex;
+    align-items: center;
+    justify-content:$type;
+}
+@mixin image ($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@mixin imag ($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+}
+@mixin img($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position:top right;
+    background-size:40%;
+}
+@mixin flexbox($type) {
+  display: flex;
+  flex-direction:$type;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+//for responsiveness
+@mixin desktop(){
+    @media screen and (max-width:1200x) {
+      @content;  
+    }
+}
+@mixin tablet(){
+    @media screen and (max-width:900px) {
+      @content;  
+    }
+}
+@mixin mobile(){
+    @media screen and (max-width:460px) {
+      @content;  
+    }
+}
+

@@ -1,0 +1,81 @@
+@import '../scss/extend';
+@import '../scss/includes';
+@import '../scss/variables';
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+  .theprojects{
+    position: relative;
+    max-width: 100%;
+    min-height: 100vh;
+  }
+   .theprojects img{
+    position:relative;
+    width:33.3%;
+    height:50%;
+    float: left;
+    object-fit: cover;
+  }
+  /*text overlay*/
+   .overlair {
+    position:absolute;
+    margin-top:7rem;
+    left:37%;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlair p {
+    font-family: $font;
+    font-style: italic;
+    line-height: 12.19px;
+    letter-spacing: 0.095em;
+    text-align: center;
+    margin: 8px;
+    @include text(10px,white,600);
+  }
+  .overlair h3 {
+    font-family:$font;
+    line-height: 31.97px;
+    letter-spacing: 0.2054em;
+    text-align: center;
+     @include text(25px,white,700);
+  }
+  .overlair .btn2 {
+    @extend .button2;
+    @include text(12px,white,600);
+  }
+.port{ 
+   background-color: #1a1a1a;
+  @include flex_center;
+  position: top;
+  min-height: 10vh;
+}
+  .port p {
+    @include text(18px,white,600);
+    font-family:$font;
+    line-height: 24.38px;
+    text-align: center;
+  }
+  @include tablet{
+    .overlair {
+      left:32%;
+    }
+    .theprojects img {
+      max-width: 450px;
+    }
+    
+  }
+  @include mobile{
+     .overlair {
+      left:15%;
+    }
+    .theprojects img {
+      width:100%;
+      height:16.7%;
+    }
+    
+  }
